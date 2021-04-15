@@ -701,7 +701,11 @@ class SketchField extends PureComponent {
       }
     }
 
-    if (this.props.lineColor !== prevProps.lineColor || this.props.fillColor !== prevProps.fillColor) {
+    if (
+      this.props.lineColor !== prevProps.lineColor || 
+      this.props.fillColor !== prevProps.fillColor ||
+      this.props.lineWidth !== prevProps.lineWidth
+    ) {
       if(this._selectedTool){
         this._selectedTool.configureCanvas(this.props);
       }
